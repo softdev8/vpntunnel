@@ -14,6 +14,8 @@
 		442B69451B06730900382B6D /* AppProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B69331B06721300382B6D /* AppProxyProvider.swift */; };
 		720FCA981B057C7900B168EB /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720FCA971B057C7900B168EB /* DataExtension.swift */; };
 		720FCAAA1B057C9400B168EB /* ControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720FCAA91B057C9400B168EB /* ControlExtension.swift */; };
+		7572599F1F83F1B0004E36CB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C47810631B42E10900B584D7 /* README.md */; };
+		757259A21F840508004E36CB /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757259A11F840508004E36CB /* NetworkExtension.framework */; };
 		B01A16991A8A616000BC9EFD /* SimpleTunnelServices.h in Headers */ = {isa = PBXBuildFile; fileRef = B01A16981A8A616000BC9EFD /* SimpleTunnelServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B01A16AC1A8A616000BC9EFD /* SimpleTunnelServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B01A16941A8A615F00BC9EFD /* SimpleTunnelServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B07CCB3D1A8940E600A4F1E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07CCB3C1A8940E600A4F1E5 /* AppDelegate.swift */; };
@@ -178,6 +180,7 @@
 		720FCAAE1B057C9400B168EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		720FCAB81B05814C00B168EB /* DataFilterExtension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DataFilterExtension.entitlements; sourceTree = "<group>"; };
 		720FCABA1B05815B00B168EB /* ControlFilterExtension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ControlFilterExtension.entitlements; sourceTree = "<group>"; };
+		757259A11F840508004E36CB /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		B01A16941A8A615F00BC9EFD /* SimpleTunnelServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleTunnelServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01A16971A8A616000BC9EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01A16981A8A616000BC9EFD /* SimpleTunnelServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTunnelServices.h; sourceTree = "<group>"; };
@@ -262,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757259A21F840508004E36CB /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +325,14 @@
 			path = FilterControlProvider;
 			sourceTree = "<group>";
 		};
+		757259A01F840508004E36CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				757259A11F840508004E36CB /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B01A16951A8A616000BC9EFD /* SimpleTunnelServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +367,7 @@
 				720FCA961B057C7900B168EB /* FilterDataProvider */,
 				720FCAA81B057C9400B168EB /* FilterControlProvider */,
 				B07CCB381A8940E600A4F1E5 /* Products */,
+				757259A01F840508004E36CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -697,6 +710,7 @@
 			files = (
 				C4E003AE1B1A9E45001A01C0 /* Main.storyboard in Resources */,
 				C4E003AF1B1A9E45001A01C0 /* Images.xcassets in Resources */,
+				7572599F1F83F1B0004E36CB /* README.md in Resources */,
 				C4E003B01B1A9E45001A01C0 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1122,6 +1136,7 @@
 					"VPNTYPE=\\\"$(PLUGIN_BUNDLE_ID)\\\"",
 				);
 				INFOPLIST_FILE = SimpleTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infoweise.testvpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1143,6 +1158,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "VPNTYPE=\\\"$(PLUGIN_BUNDLE_ID)\\\"";
 				INFOPLIST_FILE = SimpleTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infoweise.testvpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
